@@ -395,8 +395,8 @@ By 2030, this system could reduce deaths by **over 50%**, giving designers preci
 
 ---
 
-Would you like me to design the **hardware architecture** and **software framework 
-(AI + GPS integration module)** next — showing how it processes violations, speech outputs, and uploads data securely?
+ **hardware architecture** and **software framework 
+(AI + GPS integration module)** next — showing how it processes violations, speech outputs, and uploads data secure.
 
 ---
 
@@ -404,7 +404,9 @@ Would you like me to design the **hardware architecture** and **software framewo
 
 ### Goal
 
-Enable RSIS to detect and track *all* moving road users — other vehicles, bicyclists, pedestrians, scooters, and mobility aids — by combining onboard devices, smartphone clients, and infrastructure sensors into a single privacy-preserving cooperative safety layer.
+Enable RSIS to detect and track *all* moving road users — other vehicles, bicyclists, pedestrians,
+scooters, and mobility aids — by combining onboard devices, smartphone clients, and infrastructure sensors
+into a single privacy-preserving cooperative safety layer.
 
 ### Enrollment & Identity
 
@@ -422,12 +424,15 @@ Enable RSIS to detect and track *all* moving road users — other vehicles, bicy
 5. **Bluetooth Low Energy (BLE) Beaconing** — smartphones/wearables/bike modules broadcast
 6. ephemeral presence beacons for nearby IVUs to detect pedestrians/cyclists when GNSS alone is insufficient (urban canyons, underpasses).
 7. **UWB / RTK (optional high-precision)** — used in pilots or professional fleets where decimeter accuracy is needed.
-8. **Roadside Infrastructure Sensors** — camera, lidar, radar units at critical intersections to provide ground-truth presence (privacy-filtered feeds).
+8. **Roadside Infrastructure Sensors** — camera, lidar, radar units at critical intersections 
+to provide ground-truth presence (privacy-filtered feeds).
 
 ### Local Fusion (on‑device)
 
-* **Neighbor table:** IVU maintains a short-lived list of nearby actors with fields: pseudotoken, relative bearing, estimated speed, last-seen timestamp, and trust-score.
-* **Sensor fusion:** combine GNSS, C-V2X neighbor messages, BLE proximity, IMU and camera/lidar (if present) to estimate relative position and intent of each actor.
+* **Neighbor table:** IVU maintains a short-lived list of nearby actors with fields: pseudotoken,
+relative bearing, estimated speed, last-seen timestamp, and trust-score.
+* **Sensor fusion:** combine GNSS, C-V2X neighbor messages, BLE proximity, IMU and camera/lidar 
+(if present) to estimate relative position and intent of each actor.
 * **Map-context:** use semantic maps (crosswalks, bike lanes, sidewalks, lane geometries) to interpret
 *  whether a dot is on a collision path (e.g., pedestrian in crosswalk vs. on sidewalk).
 
