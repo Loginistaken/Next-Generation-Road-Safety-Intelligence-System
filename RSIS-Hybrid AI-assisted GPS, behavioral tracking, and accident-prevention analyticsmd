@@ -505,5 +505,99 @@ relative bearing, estimated speed, last-seen timestamp, and trust-score.
 * **Accessibility:** ensure low-cost participation (free smartphone app, subsidized bike modules) so vulnerable groups are not excluded.
 
 ---
+U.S. traffic fatalities (NHTSA): 40,901 deaths in 2023 (NHTSA overview). 
+CrashStats
 
+Global road traffic deaths (WHO): ≈1.19 million deaths/year (Global Status Report 2023 / WHO). 
+BBHub Assets
++1
+
+Assumptions
+
+“Saved lives” = percent reduction in annual traffic fatalities caused by RSIS-style system (from behavior change, warnings, enforcement, and infrastructure fixes).
+
+You asked for scenarios from 20% up to 50% fewer deaths. Those are illustrative effectiveness levels — real-world effectiveness depends on device penetration, compliance, false-positive tuning, law/policy, and local infrastructure.
+
+I’ll show results using (a) your stated average of 40,000 U.S. deaths/yr (simple baseline), (b) NHTSA 2023 (40,901), and (c) NHTSA 2024 early estimate (39,345 reported in news) for comparison. 
+CrashStats
++1
+
+Lives saved — United States (three baselines)
+
+(All numbers are annual lives saved)
+
+Using your baseline — 40,000 deaths/yr
+
+20% reduction: 8,000 lives saved (remaining 32,000)
+
+30% reduction: 12,000 lives saved (remaining 28,000)
+
+40% reduction: 16,000 lives saved (remaining 24,000)
+
+50% reduction: 20,000 lives saved (remaining 20,000)
+
+Using NHTSA 2023 — 40,901 deaths/yr (official NHTSA number). 
+CrashStats
+
+20%: ~8,180 lives saved (remaining ~32,721)
+
+30%: ~12,270 lives saved (remaining ~28,631)
+
+40%: ~16,360 lives saved (remaining ~24,541)
+
+50%: ~20,450 lives saved (remaining ~20,450)
+
+Using NHTSA 2024 (news figure) — 39,345 deaths/yr (recent report). 
+Reuters
+
+20%: ~7,869 lives saved (remaining ~31,476)
+
+30%: ~11,804 lives saved (remaining ~27,542)
+
+40%: ~15,738 lives saved (remaining ~23,607)
+
+50%: ~19,672 lives saved (remaining ~19,672)
+
+Lives saved — Worldwide (WHO baseline ~1,190,000 deaths/yr) 
+BBHub Assets
++1
+
+20% reduction: ~238,000 lives saved (remaining ~952,000)
+
+30% reduction: ~357,000 lives saved (remaining ~833,000)
+
+40% reduction: ~476,000 lives saved (remaining ~714,000)
+
+50% reduction: ~595,000 lives saved (remaining ~595,000)
+
+Quick interpretation / realism check
+
+20% reduction is plausible as an early, partial-deployment outcome
+
+(fleet pilots, partial smartphone adoption, good tuning). 
+
+That would still prevent tens of thousands of U.S. deaths per year and hundreds of thousands worldwide.
+
+50% reduction is a best-case / long-term scenario — requiring near-universal coverage,
+excellent human–machine interaction design (very low false alarms), strong legal/institutional backing 
+(enforcement + appeal systems), and major infrastructure changes guided by RSIS analytics. 
+Achieving 50% would be transformational but very challenging and would take many years and coordinated policy/action.
+
+Gains are not linear with penetration: early adopters (commercial fleets, taxis, buses) 
+can show outsized safety benefits and accelerate acceptance. Vulnerable road users 
+(pedestrians, cyclists, motorcyclists) might see even larger relative benefit if they have devices/SDKs too.
+
+Caveats & important notes
+
+These estimates assume fatalities only — RSIS would likely prevent many more non-fatal injuries (hospitalizations, lifelong disabilities).
+
+Effectiveness depends heavily on false-positive management (avoid alert fatigue),
+
+privacy/trust, and legal/regulatory frameworks (for enforcement actions).
+
+Country-level effectiveness will vary: low- and middle-income countries account for 
+
+~92% of road deaths but have different vehicle mixes, enforcement capacity, 
+
+and infrastructure; tailoring and low-cost device strategies are critical.
 *
