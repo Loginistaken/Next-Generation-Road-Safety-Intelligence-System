@@ -62,7 +62,11 @@ License: Attribution–NonCommercial–NoDerivatives 4.0 (CC BY-NC-ND 4.0).
 
 
 
+Title:
+Next-Generation Road Safety Intelligence System (RSIS™) — a hybrid of AI-assisted GPS, behavioral tracking, and accident-prevention analytics.
 
+Legal note:
+RSIS™ (Road Safety Intelligence System) is the proprietary designation for this invention, representing an AI-driven vehicular monitoring and accident-prevention network. The acronym is uniquely applied within the domain of traffic safety, autonomous navigation, and vehicular data analytics.
 
 RSIS as an acronym: can you use it legally?
 
