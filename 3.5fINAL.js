@@ -1,4 +1,207 @@
-// package.json
+Here’s a comprehensive breakdown of everything this RSIS 3.0 
+
+1. Core Purpose
+
+RSIS 3.0 (Road Safety Intelligence System) is a real-time accident-prevention and risk-monitoring
+
+system designed for vehicles, pedestrians, cyclists, and passengers. 
+  
+    It combines AI-driven hazard scoring, ephemeral privacy tokens, predictive analytics,
+    
+    and audio/visual alerts to reduce traffic accidents and improve situational awareness.
+
+2. Server-Side Functionality (server.js)
+User Management
+
+Sign-up with role selection (/signup):
+
+Users select a role (walker, cyclist, vehicle, passenger) and accept a dedication agreement.
+
+Passwords are securely hashed using bcrypt.
+
+JWT tokens are issued for authentication.
+
+Login (/login):
+
+Users authenticate using username/password.
+
+Returns a JWT token with the user's role.
+
+Real-time WebSocket Communication (via Socket.IO)
+
+Connection authentication:
+
+Validates JWT tokens before allowing access.
+
+Actor updates (updateActor):
+
+Users send their current position (lat, lon) and speed.
+
+Generates ephemeral tokens for privacy.
+
+Associates user role with each actor.
+
+Updates hazard tiles (geospatial grid of risk areas).
+
+Dynamically updates a neighbor table with trust scores and actor positions.
+
+Broadcasts hazard tile updates to all connected clients.
+
+TTC Prediction (predictTTC):
+
+Calculates Time-to-Collision (TTC) between actors in a tile.
+
+Sends predictions back to requesting client.
+
+3. Hazard and Risk Computation (src/services/)
+Risk Score (riskScore.js)
+
+Computes risk for a tile based on actors’ positions, speeds, and roles.
+
+Uses TTC (Time-to-Collision) thresholds to determine danger.
+
+Prioritizes actors according to ROLE_PRIORITY:
+
+Walker: 3
+
+Cyclist: 2
+
+Vehicle: 1
+
+Passenger: 2
+
+Hazard Tile Aggregation (hazardTiles.js)
+
+Stores historical risk scores for tiles.
+
+Maintains a rolling history (max 100 entries per tile).
+
+Provides aggregated data for trend analysis.
+
+TTC Prediction (ttcPredict.js)
+
+Predicts the minimum time before potential collision for actors within a tile.
+
+Used to trigger early warnings.
+
+4. Audio & Text-to-Speech Alerts (TTSService.js)
+
+playAudioAlert: Plays pre-recorded alert audio with volume adjusted to role priority.
+
+speakAlert: Logs TTS messages (can later integrate with actual TTS engines).
+
+Alerts are triggered when high-risk areas are detected.
+
+5. Utilities
+
+Neighbor Table (neighborTable.js)
+
+Tracks ephemeral tokens, positions, roles, and trust scores.
+
+Supports token rotation for privacy.
+
+Role Priority (rolePriority.js)
+
+Provides priority values for different actor types.
+
+6. Client-Side Functionality (React Native App)
+Map Visualization (IVUMap.js)
+
+Displays hazard tiles on a map as polygons.
+
+Tile color intensity is proportional to risk score.
+
+Integrates react-native-maps for geospatial visualization.
+
+Actor List (ActorList.js)
+
+Displays a list of actors in a tile with role and speed.
+
+App Integration (App.js)
+
+Connects to the RSIS server via Socket.IO.
+
+Receives real-time hazard updates.
+
+Plays audio and TTS alerts when entering high-risk zones.
+
+Optionally logs TTC predictions for monitoring.
+
+7. Security & Privacy
+
+JWT authentication ensures only authorized users can connect.
+
+Passwords are hashed with bcrypt.
+
+Ephemeral tokens obscure the identity of actors for privacy.
+
+Trust scores dynamically adjust to penalize erratic or suspicious behavior.
+
+8. Supported Platforms
+
+Web / Node.js Server: Runs hazard aggregation, risk scoring, and real-time communication.
+
+Mobile Client (React Native):
+
+Android support via react-native run-android.
+
+Displays maps, actors, and hazard tiles in real-time.
+
+Provides audio/TTS alerts.
+
+9. Dependencies
+
+Express: Web server for REST APIs.
+
+Socket.IO: Real-time communication.
+
+geolib: Geospatial calculations.
+
+React / React Native: Mobile UI.
+
+react-native-maps: Map display.
+
+react-native-tts / expo-av: Text-to-speech and audio alerts.
+
+bcrypt: Secure password hashing.
+
+jsonwebtoken: Authentication tokens.
+
+10. Summary of Capabilities
+
+Real-time actor tracking with role-based priority.
+
+Hazard tile generation and aggregation for geospatial risk analysis.
+
+TTC-based collision prediction.
+
+Audio/TTS alerts for high-risk areas.
+
+Ephemeral tokens for privacy.
+
+Trust scoring for dynamic behavior evaluation.
+
+Secure user management with sign-up/login.
+
+Cross-platform visualization (React Native map).
+
+Live notifications of danger zones.
+
+Historical risk data storage for analytics and trend monitoring.
+
+In short, RSIS 3.0 is a full-stack, real-time road safety intelligence system combining:
+
+User authentication,
+
+Actor tracking,
+
+Hazard scoring,
+
+Predictive collision analytics, and
+
+Audio-visual alerts,
+
+all while protecting user privacy and providing real-time map visualization on mobile devices.// package.json
 {
   "name": "rsis-3.0",
   "version": "1.0.0",
