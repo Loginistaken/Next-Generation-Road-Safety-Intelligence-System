@@ -16,6 +16,7 @@
     "react-native-maps": "^1.3.2"
   }
 }
+npm install react-native-tts
 
 // server.js
 const express = require("express");
@@ -29,6 +30,33 @@ const server = http.createServer(app);
 const io = socketIo(server, { cors: { origin: "*" } });
 
 let hazardTiles = {};
+src/services/TTSAudioAddon.js
+// src/services/TTSAudioAddon.js
+import Tts from 'react-native-tts';
+
+const ROLE_PRIORITY = { walker: 3, cyclist: 2, vehicle: 1 };
+
+// Optional: adjust TTS settings
+Tts.setDefaultRate(0.5);
+Tts.setDefaultPitch(1.0);
+
+/**
+ * Add-on function to play audio alerts for high-risk tiles
+ * @param {Object} actor - {role: string}
+ * @param {string} message - alert text
+ */
+export function playAudioAlert(actor, message) {
+  const alertMessage = `[${actor.role.toUpperCase()}] ${message}`;
+  Tts.speak(alertMessage);
+}
+import { playAudioAlert } from "./services/TTSAudioAddon";
+tile.actors.forEach((actor) => {
+  if (tile.riskScore > 0) {
+    speakAlert(actor, "High-risk area nearby. Adjust speed and direction."); // existing console alert
+    playAudioAlert(actor, "High-risk area nearby. Adjust speed and direction."); // new audio add-on
+  }
+});
+npm run mobile
 
 io.on("connection", (socket) => {
   console.log("IVU connected:", socket.id);
