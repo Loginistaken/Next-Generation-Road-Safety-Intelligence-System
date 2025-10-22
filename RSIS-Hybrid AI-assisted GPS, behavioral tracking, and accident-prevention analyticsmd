@@ -108,17 +108,7 @@ Behavior-triggered collisions.
 
 ---
 
-## ⚙️ **System Overview**
 
-RSIS is a **vehicle-integrated AI and GPS computer** that continuously monitors a driver’s:
-
-* **Speed**
-* **Location**
-* **Driving behavior (sudden stops, swerves, etc.)**
-* **Environmental hazards (traffic, construction, pedestrians, weather)**
-
-It connects to a central national database that records anonymized traffic data and automatically
-updates maps, speed limits, and accident-prone zones.
 
 ---
 
@@ -166,8 +156,14 @@ By 2030, this system could reduce deaths by **over 50%**, giving designers preci
 
 
 **hardware architecture** and **software framework (AI + GPS integration module)** next — 
+
 showing how it processes violations, speech outputs, and uploads data securely.
-That’s an excellent concept — you’re describing a **Next-Generation Road Safety Intelligence System (RSIS)** — a hybrid of AI-assisted GPS, behavioral tracking, and accident-prevention analytics. Let’s define and design it properly, showing how it saves lives and lays the groundwork for fully autonomous transport systems.
+
+That’s an excellent concept — you’re describing a **Next-Generation Road Safety Intelligence System (RSIS)** —
+
+a hybrid of AI-assisted GPS, behavioral tracking, and accident-prevention analytics. 
+
+Let’s define and design it properly, showing how it saves lives and lays the groundwork for fully autonomous transport systems.
 
 ---
 
@@ -227,13 +223,21 @@ into a single privacy-preserving cooperative safety layer.
 ### Positioning & Communication Layers (multi‑modal)
 
 1. **GNSS (GPS + GLONASS + Galileo)** — baseline position for all devices. Map-matching improves road/lane placement.
+
 2. **Cellular (4G/5G)** — long-range data uplink for periodic state updates and cloud sync.
+
 3. **C-V2X / DSRC (where available)** — low-latency vehicle-to-vehicle broadcasts for immediate
+
 4. collision-avoidance messages (direct short-range comms).
+
 5. **Bluetooth Low Energy (BLE) Beaconing** — smartphones/wearables/bike modules broadcast
+
 6. ephemeral presence beacons for nearby IVUs to detect pedestrians/cyclists when GNSS alone is insufficient (urban canyons, underpasses).
+
 7. **UWB / RTK (optional high-precision)** — used in pilots or professional fleets where decimeter accuracy is needed.
+
 8. **Roadside Infrastructure Sensors** — camera, lidar, radar units at critical intersections 
+
 to provide ground-truth presence (privacy-filtered feeds).
 
 ### Local Fusion (on‑device)
@@ -323,11 +327,14 @@ BBHub Assets
 
 Assumptions
 
-“Saved lives” = percent reduction in annual traffic fatalities caused by RSIS-style system (from behavior change, warnings, enforcement, and infrastructure fixes).
+“Saved lives” = percent reduction in annual traffic fatalities caused by RSIS-style system 
+(from behavior change, warnings, enforcement, and infrastructure fixes).
 
-You asked for scenarios from 20% up to 50% fewer deaths. Those are illustrative effectiveness levels — real-world effectiveness depends on device penetration, compliance, false-positive tuning, law/policy, and local infrastructure.
+You asked for scenarios from 20% up to 50% fewer deaths. Those are illustrative effectiveness levels — 
+real-world effectiveness depends on device penetration, compliance, false-positive tuning, law/policy, and local infrastructure.
 
-I’ll show results using (a) your stated average of 40,000 U.S. deaths/yr (simple baseline), (b) NHTSA 2023 (40,901), and (c) NHTSA 2024 early estimate (39,345 reported in news) for comparison. 
+I’ll show results using (a) your stated average of 40,000 U.S. deaths/yr (simple baseline), 
+(b) NHTSA 2023 (40,901), and (c) NHTSA 2024 early estimate (39,345 reported in news) for comparison. 
 CrashStats
 +1
 
