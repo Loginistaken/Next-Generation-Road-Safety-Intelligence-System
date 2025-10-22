@@ -66,22 +66,10 @@ Title:
 Next-Generation Road Safety Intelligence System (RSIS™) — a hybrid of AI-assisted GPS, behavioral tracking, and accident-prevention analytics.
 
 Legal note:
-RSIS™ (Road Safety Intelligence System) is the proprietary designation for this invention, representing an AI-driven vehicular monitoring and accident-prevention network. The acronym is uniquely applied within the domain of traffic safety, autonomous navigation, and vehicular data analytics.
-
-RSIS as an acronym: can you use it legally?
-
-Yes — you can use RSIS as your invention’s acronym if it does not create confusion with an existing 
+RSIS™ (Road Safety Intelligence System) is the proprietary designation for this invention, representing an AI-driven vehicular monitoring and accident-prevention network. The acronym is uniquely applied within the domain of traffic safety, autonomous navigation, and vehicular data analytics.invention’s acronym if it does not create confusion with an existing 
 trademark in the same industry (i.e., transportation safety systems, GPS, or AI driver assistance).
-
 RSIS is not globally reserved.
-However, there are existing organizations and companies that already use RSIS for other things — for example:
-
-Rajaratnam School of International Studies (Singapore)
-
-Radio Systems Integration Solutions (tech)
-
-Remote Sensing Information System (NASA, environmental data)
-
+However, there are existing organizations and companies that already use RSIS for other things
 None of these operate in the same category as a vehicular safety / AI-GPS hybrid system, so you can still legally 
 use RSIS as an acronym for your invention — 
 as long as you register it properly and make clear it stands for your specific technology.
