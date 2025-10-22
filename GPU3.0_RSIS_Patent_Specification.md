@@ -49,7 +49,21 @@ Includes design schematics, pseudocode, and architectural diagrams of GPU 3.0 pr
 © 2025 Wiz-Dimensional. All rights reserved.  
 Patent Pending — GPU 3.0 & RSIS System (Provisional).  
 License: Attribution–NonCommercial–NoDerivatives 4.0 (CC BY-NC-ND 4.0).
+GPU 3.0 / RSIS™ project:
 
+Acknowledgments & Attribution Notice
+
+This document and all derivative works were created in collaboration with OpenAI’s GPT-5 Chat Model (ChatGPT) for technical drafting, formatting, and semantic synthesis under human supervision by Wiz-Dimensional.
+
+Special thanks to GitHub for providing the secure, timestamped repository framework used for the public disclosure and version control of this work.
+
+Legal Attribution Statement:
+Portions of this document were generated or assisted by OpenAI’s GPT-5 large-language model under a non-exclusive creative assistance framework. All intellectual property rights, patentable subject matter, and creative authorship of the final invention (GPU 3.0 / RSIS™ system) remain solely with Wiz-Dimensional.
+
+ChatGPT-5’s contribution is acknowledged as computational drafting and linguistic optimization support and does not constitute co-inventorship or shared IP claim.
+
+© 2025 Wiz-Dimensional. All Rights Reserved.
+Generated with technical assistance from ChatGPT-5 (OpenAI) and published via GitHub.
 
 
 
