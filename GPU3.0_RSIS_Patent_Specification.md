@@ -1,7 +1,7 @@
 # GPU 3.0 Patent Specification  
 ### Title: Next-Generation Road Safety Intelligence System — AI-Assisted GPS, Behavioral Tracking, and Accident-Prevention Analytics  
-**Inventor:** Wiz-Dimensional  
-**Filed Date (Public Disclosure):** [Auto-timestamp by GitHub]  
+**Inventor:** Wiz-Dimensional (Eric Caldwell Lindau)
+**Filed Date (Public Disclosure):** [Auto-timestamp by GitHub] 10/21/25  
 **Repository:** Wiz-Dimensional-GPU3.0-RSIS-Patent  
 
 ---
