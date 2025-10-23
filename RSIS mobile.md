@@ -8,7 +8,7 @@ RSIS (Road Safety Intelligence System) is a realtime safety layer for roads. The
 
 When you install the RSIS app on your Android phone, iPhone, tablet, or macOS laptop, your device:
 
-uses its GPS, motion sensors, Bluetooth and (optionally) camera to understand where you are and what you’re doing;
+uses its GPS, motion sensors, Bluetooth  to understand where you are and what you’re doing;
 
 runs compact prediction models locally to judge whether a collision or dangerous situation might occur soon;
 
