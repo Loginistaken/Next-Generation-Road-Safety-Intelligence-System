@@ -62,8 +62,9 @@ smartphone/bike modules, infrastructure augmentation, and full integration with 
 
 Safety impact projections: With partial deployment (20% reduction in fatalities), RSIS could save tens of 
 thousands of U.S. lives annually (~238,000 worldwide). Full adoption (50% reduction) could prevent ~20,000 U.S. 
-deaths and ~595,000 global deaths yearly, while also preventing countless non-fatal injuries. 
-Real-world effectiveness depends on penetration, compliance, false-positive management, legal frameworks, and infrastructure support.
+deaths yearly, while also preventing countless non-fatal injuries. 
+Real-world effectiveness depends on penetration, compliance, 
+false-positive management, legal frameworks, and infrastructure support.
 
 Overall: RSIS provides a real-time, privacy-conscious, multi-agent safety network with predictive analytics, 
 enforcement integration, and groundwork for future autonomous vehicles, aiming to transform road safety globally
