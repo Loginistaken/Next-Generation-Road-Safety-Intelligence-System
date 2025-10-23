@@ -235,7 +235,9 @@ into a single privacy-preserving cooperative safety layer.
 * **Device registration:** Each participating device (IVU, smartphone app, wearable,
 * bike module) obtains a device identity and short-lived pseudonymous token from the RSIS provisioning service.
 * Tokens rotate frequently to preserve privacy.
-* **Opt-in and legal modes:** regions may require mandatory enrollment for vehicle IVUs but should allow limited opt-in modes for pedestrians/cyclists (or legal frameworks for mandatory registration in high-risk zones). Provide clear consent flows in the smartphone/wearable app.
+* **Opt-in and legal modes:** regions may require mandatory enrollment for vehicle IVUs but should allow limited opt-in
+modes for pedestrians/cyclists (or legal frameworks for mandatory registration in high-risk zones). 
+Provide clear consent flows in the smartphone/wearable app.
 
 ### Positioning & Communication Layers (multi‑modal)
 
