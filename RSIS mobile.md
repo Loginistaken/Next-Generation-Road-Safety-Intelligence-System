@@ -1,6 +1,6 @@
 RSIS mobile client: a cross-platform app that turns ordinary smartphones into powerful, privacy-aware road-safety nodes.
 
-What it is, how it works, why it matters, and what it feels like to use it — all slowly and clearly.
+What it is, how it works, why it matters, and what it feels like to use it.
 
 What is the RSIS mobile app, in plain words?
 
