@@ -222,3 +222,5 @@ Behavioral scoring	Reduces reckless driving by tracking violations and encouragi
 Data aggregation	Identifies accident-prone areas and suggests infrastructure fixes (e.g., crosswalk redesign).
 Pedestrian & cyclist protection	Detects vulnerable road users using BLE/UWB beacons and warns vehicles nearby.
 Fleet coordination	Enables vehicles to share hazard data (V2V/C-V2X), improving group awareness and preventing chain collisions.
+
+Invented and conceptually developed by Eric C. Lindau. Assisted through AI-aided co-engineering environments (ChatGPT, GitHub Copilot)as well as bring special thanks OpenAI gpt chat for bring us the images. All combinatorial elements, structural mappings, material configurations, and thermoelectric AI feedback systems are attributed to the inventor and may be subject to protection under applicable copyright, intellectual property, and patent frameworks.
