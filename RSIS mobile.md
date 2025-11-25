@@ -32,6 +32,11 @@ The mobile app talks to a backend server (Node.js + Express) using Socket.IO for
 Authentication and privacy use industry practices (hashed passwords, JWT tokens),
 and the app exchanges ephemeral pseudonymous tokens rather than your real identity.
 
+Imagine GPS users with BLE connections for back up system. This could enable low network areas to auto connet to BLE regonigintion without GPS
+this enables non-GPS users to interact with Bluetooth. We will update mobile app. settings for phones with Bluetooth 5 
+with protocall updates, warnings up too 500 too 800 feet away with settings change for highway, freeway, curvy road alerts
+where the user is informed well ahead of time, warned from 700 ft away if traveling at high speeds. 
+
 The sensory inputs — what the phone actually uses
 
 Your phone has lots of tiny sensors. RSIS combines several to build a safety picture:
