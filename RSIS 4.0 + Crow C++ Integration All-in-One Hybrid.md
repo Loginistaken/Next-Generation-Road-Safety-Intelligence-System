@@ -337,8 +337,7 @@ No proprietary code or libraries were copied.
 
 Integration via HTTP/JSON is standard practice and does not require additional licensing.
 
-This means your system is fully legal for commercial and research use.
-A safer, lawyer-friendly phrasing (recommended):
+
 
 “System architecture, integration design, and original implementation by Eric C. Lindau.
 Developed using permissively licensed open-source software (MIT/BSD), including Ruby on Rails and Crow.
