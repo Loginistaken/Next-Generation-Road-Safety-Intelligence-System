@@ -338,4 +338,8 @@ No proprietary code or libraries were copied.
 Integration via HTTP/JSON is standard practice and does not require additional licensing.
 
 This means your system is fully legal for commercial and research use.
-Invented and conceptually developed by Eric C. Lindau. Assisted through AI-aided co-engineering environments (ChatGPT5)as well as bring special thanks OpenAI gpt chat for bring us the images. All combinatorial elements, structural mappings, material configurations, and thermoelectric AI feedback systems are attributed to the inventor and may be subject to protection under applicable copyright, intellectual property, and patent frameworks.
+A safer, lawyer-friendly phrasing (recommended):
+
+“System architecture, integration design, and original implementation by Eric C. Lindau.
+Developed using permissively licensed open-source software (MIT/BSD), including Ruby on Rails and Crow.
+AI-assisted development tools were used for code generation, review, and visualization.”
