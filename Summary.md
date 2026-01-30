@@ -1,5 +1,109 @@
 Road Safety Intelligence System (RSIS) – Full Overview
 
+How RSIS Identifies Users Without Knowing Who They Are
+
+When a new user first opens the RSIS mobile app, the system does not ask for their real name, driver’s license, 
+or personal identity. Instead, RSIS creates what is called a Pseudo Safety Token (PST). This token is a randomized,
+non-identifying digital ID that represents the user inside the RSIS network. Think of it like a temporary badge number, 
+not a name. The PST allows RSIS to recognize that the same device and user are participating over time, 
+while still keeping them anonymous. This design choice is intentional: RSIS is built around safety patterns, not personal surveillance.
+
+The Pseudo Safety Token is generated locally on the user’s device during first launch and then registered with the RSIS backend.
+The token is cryptographically hashed, meaning it cannot be reversed to identify the person. Even RSIS administrators cannot
+see who the user is — only how that anonymous token behaves on the road. This token becomes the anchor point for everything
+else the system does: behavior tracking, risk scoring, learning patterns, and alert personalization. If the app is deleted,
+the token disappears with it unless the user explicitly restores it.
+
+User Sign-In and the RSIS Participation Agreement
+
+Instead of a traditional “account sign-up,” RSIS uses a Node Participation Agreement. This agreement explains,
+in simple language, that the user’s device will act as a safety node in the RSIS network. By accepting it,
+the user agrees to allow limited GPS and motion data to be used only for accident prevention and safety analytics.
+This agreement is modular — users can opt into different levels of participation, such as local-only alerts or full predictive modeling.
+
+Once accepted, the user’s device becomes a trusted RSIS node, meaning it can both receive warnings and contribute 
+anonymized data back into the system. Importantly, this agreement is not permanent. Users can pause, downgrade, 
+or revoke participation at any time, which immediately stops GPS data flow and freezes behavioral learning for that token.
+RSIS is designed so that consent is continuous, not assumed.
+
+GPS Consent and Why RSIS Needs It
+
+RSIS asks for GPS access not to track people, but to understand movement context. 
+GPS tells the system where motion is happening, but RSIS focuses more on how it’s happening. For example, sudden stops, 
+sharp turns, or unusual speed changes can indicate danger — but those signals only make sense when combined with location context, 
+such as an intersection, curve, or pedestrian crossing.
+
+When GPS is enabled, RSIS does not store exact paths in a personally readable way. Instead, the system converts 
+raw GPS data into risk vectors and location probability models. These models allow RSIS to say things like, 
+“This type of movement at this location has a higher accident probability,” without ever storing a map of 
+where a specific person went. This balance allows RSIS to improve safety predictions while respecting privacy boundaries.
+
+Choosing a Mobility Role: How RSIS Understands Your Perspective
+
+During onboarding, RSIS asks the user to select a mobility role. 
+This step is critical because accident risk looks very different depending on how someone moves through the world. The available roles include:
+
+Vehicle Driver
+
+Cyclist
+
+Passenger
+
+Walker (Pedestrian)
+
+This choice tells RSIS how to interpret sensor data and what kinds of alerts are relevant.
+A cyclist’s risks are different from a driver’s, and a pedestrian needs warnings that a car never would.
+The role selection doesn’t lock the user permanently — it can be changed at any time, even mid-day, allowing RSIS to adapt instantly.
+
+How RSIS Uses the Role to Protect the User
+
+Once a role is selected, RSIS adjusts its internal models. For a driver, the system focuses on speed, 
+braking force, lane behavior, and traffic flow. For a cyclist, RSIS emphasizes proximity to vehicles, 
+road surface changes, and intersection behavior. For a walker, the system watches crossing patterns, 
+vehicle approach speeds, and signal timing. For a passenger, RSIS reduces motion analysis and focuses 
+more on environmental hazards and vehicle behavior patterns.
+
+This role-aware design allows RSIS to give contextually accurate warnings, such as alerting a pedestrian 
+that a vehicle is approaching too fast at a crosswalk, or warning a cyclist of a high-risk turn based 
+on previous incidents. Each alert is generated based on probability, not certainty — RSIS doesn’t say
+“an accident will happen,” but rather “risk is elevated right now.”
+
+How the Pseudo Token Learns Over Time
+
+As the user moves through the world, the Pseudo Safety Token accumulates behavioral patterns, not personal history. 
+The system learns things like typical reaction time, braking smoothness, or walking speed — 
+all without attaching those traits to a real identity. These patterns help RSIS distinguish between normal behavior 
+and anomalies, which often precede accidents.
+
+For example, if a driver normally brakes smoothly but suddenly begins braking erratically in a high-risk zone, 
+RSIS flags that moment as elevated danger and may issue a warning. Over time, the AI improves because it 
+learns from millions of anonymous tokens, not just one. This collective intelligence is what makes RSIS powerful:
+every participant helps protect everyone else.
+
+Behind the Scenes: Hybrid AI and Crow C++ Processing
+
+All of this data — GPS vectors, motion signals, role context, and risk probabilities —
+flows into the RSIS hybrid engine. The JavaScript layer handles user interaction, mobile notifications, 
+and consent logic, while the Crow C++ backend performs high-speed calculations. Crow is used because 
+it can process large volumes of data with very low latency, which is essential when decisions must be made in fractions of a second.
+
+The C++ layer aggregates data from many anonymous tokens and updates predictive models continuously. 
+These models are then pushed back to mobile devices in lightweight form, allowing alerts to be generated 
+even when connectivity is limited. This hybrid design ensures RSIS remains responsive, scalable, and reliable across cities and regions.
+
+From Individual Safety to System-Wide Intelligence
+
+At its most advanced level, RSIS is not just protecting individual users — it is reshaping road safety itself.
+By combining pseudo tokens, role-aware modeling, behavioral learning, and real-time AI, 
+RSIS creates a living safety network. Dangerous intersections are identified faster. 
+Near-misses are learned from even when no accident occurs. Infrastructure weaknesses 
+become visible through data patterns rather than tragedy.
+
+To a newcomer, RSIS may look like a smart safety app. In reality, it is a distributed intelligence system, where every user contributes anonymously to a larger understanding of risk. The pseudo token ensures privacy, the agreement ensures consent, the role selection ensures relevance, and the AI ensures prevention. Together, they form a system designed not to react to accidents — but to make them less likely to happen at all.
+
+
+
+
 The Road Safety Intelligence System (RSIS) is designed to make driving safer by combining artificial intelligence, 
 GPS tracking, behavioral analysis, and real-time alerts. Imagine having a highly intelligent co-pilot in your car 
 that watches the road, predicts hazards, and nudges you to avoid accidents — that is essentially what RSIS does.
