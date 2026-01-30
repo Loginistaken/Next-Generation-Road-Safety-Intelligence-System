@@ -79,7 +79,80 @@ For example, if a driver normally brakes smoothly but suddenly begins braking er
 RSIS flags that moment as elevated danger and may issue a warning. Over time, the AI improves because it 
 learns from millions of anonymous tokens, not just one. This collective intelligence is what makes RSIS powerful:
 every participant helps protect everyone else.
+RSIS Operation Without GPS or Internet Connectivity
 
+RSIS is designed to remain functional even when GPS signals or internet connectivity are unavailable. 
+In situations such as tunnels, rural areas, urban canyons, natural disasters, or network outages, 
+the system can switch into an offline proximity-based safety mode using Bluetooth 5. 
+In this mode, RSIS does not rely on satellites or cloud servers. Instead, nearby devices running
+RSIS communicate directly with one another, forming a temporary, local safety network. 
+This allows the system to continue detecting risk and issuing alerts even when traditional positioning systems are unavailable.
+
+At a basic level, Bluetooth 5 allows RSIS devices to sense the presence, distance, 
+and movement of other nearby RSIS participants. Each device broadcasts a short,
+anonymous signal tied to its Pseudo Safety Token, without revealing identity or location. 
+When two or more RSIS nodes come within range, they recognize one another as trusted safety participants. 
+From the user’s perspective, this happens automatically and silently in the background, with no pairing, scanning,
+or manual setup required.
+
+Detecting Nearby RSIS Users Without Location Data
+
+When GPS is unavailable, RSIS shifts from location-based awareness to proximity-based awareness.
+Instead of asking “Where am I on the map?”, the system asks “Who is near me, 
+how fast are we moving relative to one another, and is risk increasing?” 
+Bluetooth 5 provides signal strength, timing, and motion correlation data,
+which RSIS uses to estimate distance and relative speed between devices.
+This enables the system to detect potential collision paths, crowding, or unsafe closeness between vehicles, cyclists, and pedestrians.
+
+For example, a cyclist and a car both running RSIS may be approaching the 
+same intersection inside a tunnel where GPS is blocked. Using Bluetooth 5 
+alone, RSIS can detect closing distance and relative motion vectors and
+issue a warning to both users, even though neither device knows its absolute position. 
+In this way, RSIS continues to function as a local safety reflex, independent of maps or internet access.
+
+Role-Aware Bluetooth Safety Interactions
+
+RSIS’s Bluetooth-based mode remains fully role-aware. Each broadcast signal
+includes a minimal role flag — driver, cyclist, walker, or passenger 
+— without revealing identity or direction of travel. This allows RSIS to interpret proximity data correctly.
+A pedestrian near a moving vehicle triggers a different risk model than two vehicles traveling side by side.
+The system adjusts alert thresholds dynamically based on these roles, ensuring warnings are relevant and not excessive.
+
+This role-aware design is critical because it allows RSIS to prevent accidents in mixed-use environments, 
+such as shared streets, parking structures, or crowded event zones. Even without GPS, RSIS can identify
+high-risk interactions simply by analyzing how different types of participants move relative to one another in physical space.
+
+Privacy-Preserving Bluetooth Networking
+
+Bluetooth communication in RSIS is intentionally short-range, temporary, and anonymous. 
+Pseudo Safety Tokens are rotated or masked during Bluetooth broadcasts to prevent long-term tracking. 
+No device stores a list of nearby users, and no identifying information is exchanged. 
+Once two RSIS nodes move out of range, their interaction ends and leaves no persistent trail. 
+This ensures that offline operation does not introduce new privacy risks.
+
+Importantly, Bluetooth-based interactions do not require internet access or backend confirmation. 
+Decisions are made locally on the device, using lightweight predictive models distributed by the
+RSIS system during prior updates. This allows safety alerts to be generated in real time, even in complete isolation from the network.
+
+Integration With the Hybrid RSIS Architecture
+
+From a system perspective, Bluetooth-only operation fits naturally into RSIS’s hybrid architecture. 
+The mobile JavaScript layer manages Bluetooth scanning, signal interpretation, and user alerts.
+The Crow C++ engine performs rapid proximity risk calculations using motion data and signal metrics.
+When connectivity is restored, summarized, anonymized learning data can optionally be shared back to the RSIS backend for long-term model improvement — but safety functionality does not depend on this step.
+
+This design ensures that RSIS is resilient, capable of functioning in degraded environments
+without compromising user safety or privacy. Whether online or offline, GPS-enabled or Bluetooth-only, 
+RSIS remains focused on its core purpose: identifying risk early and helping people avoid accidents before they occur.
+
+Why GPS-Independent Safety Matters
+
+By supporting Bluetooth 5–based operation, RSIS avoids a critical single point of failure common 
+in many modern safety systems. Roads, cities, and emergencies are unpredictable, and connectivity 
+cannot be assumed. RSIS treats connectivity as an enhancement, not a requirement. 
+This philosophy allows the system to protect users in the very situations where traditional navigation and safety tools often fail.
+
+In practical terms, this means RSIS is not just a smart navigation system — it is a distributed safety presence, capable of operating anywhere people and vehicles move, even when infrastructure breaks down. This capability reinforces RSIS’s role as a next-generation road safety intelligence system, designed for real-world conditions rather than ideal ones.
 Behind the Scenes: Hybrid AI and Crow C++ Processing
 
 All of this data — GPS vectors, motion signals, role context, and risk probabilities —
