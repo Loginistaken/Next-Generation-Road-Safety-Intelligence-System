@@ -105,3 +105,5 @@ Each paragraph of the system—from layman explanation to packet-level design—
 safety information should be available when it matters, identity should remain private,
 and participation should always be voluntary. In this way, 
 RSIS 4.1 functions less like an app upgrade and more like the introduction of a new, ethical layer of road safety infrastructure.
+
+Invented and conceptually developed by Eric C. Lindau. Assisted through AI-aided co-engineering environments (ChatGPT 5)as well as bring special thanks OpenAI gpt chat for bring us the images. All combinatorial elements, structural mappings, material configurations, and thermoelectric AI feedback systems are attributed to the inventor and may be subject to protection under applicable copyright, intellectual property, and patent frameworks.
